@@ -1,0 +1,37 @@
+.printRoot {
+  display: none;
+}
+
+.resumePaper {
+  width: 8.27in;
+  min-height: 11.69in;
+  background: #ffffff;
+  padding: 0.6in;
+  box-sizing: border-box;
+}
+
+@media print {
+  body {
+    background: #ffffff;
+  }
+
+  .landingRoot {
+    display: none !important;
+  }
+
+  .printRoot {
+    display: block !important;
+  }
+
+  .resumePaper {
+    width: auto;
+    min-height: auto;
+    padding: 0;
+    box-shadow: none;
+  }
+}
+
+@page {
+  size: A4;
+  margin: 0.5in;
+}

@@ -1,0 +1,127 @@
+.resume {
+  font-family: Calibri, Arial, sans-serif;
+  font-size: 10pt;
+  line-height: 1.1;
+  color: #111111;
+}
+
+.resumeHeader {
+  margin-bottom: 5pt;
+}
+
+.resumeName {
+  font-size: 18pt;
+  font-weight: 700;
+  margin: 0;
+  line-height: 1.05;
+}
+
+.resumeContact {
+  margin: 2pt 0 0;
+}
+
+.resumeSection {
+  margin-top: 7pt;
+}
+
+.resumeSectionTitle {
+  font-size: 12pt;
+  font-weight: 700;
+  margin: 0 0 2pt;
+  text-transform: uppercase;
+  letter-spacing: 0.25pt;
+  border-bottom: 1pt solid #111111;
+  padding-bottom: 1pt;
+}
+
+.resumeSectionBody {
+  margin: 0;
+}
+
+.resumeParagraph {
+  margin: 0;
+}
+
+.inlineList {
+  margin: 0;
+}
+
+.skillGroups {
+  margin: 0;
+}
+
+.skillGroup {
+  margin: 0 0 2pt;
+}
+
+.skillGroup:last-child {
+  margin-bottom: 0;
+}
+
+.skillGroupLabel {
+  font-weight: 700;
+}
+
+.job {
+  margin-top: 5pt;
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+
+.jobHeader {
+  display: flex;
+  justify-content: space-between;
+  gap: 10pt;
+}
+
+.jobLeft {
+  min-width: 0;
+}
+
+.jobTitle {
+  font-weight: 700;
+}
+
+.jobCompany {
+  margin-top: 1pt;
+}
+
+.jobDates {
+  white-space: nowrap;
+  font-weight: 700;
+}
+
+.jobBullets {
+  margin: 1pt 0 0 13pt;
+  padding: 0;
+}
+
+.jobBullets li {
+  margin: 0;
+}
+
+.eduRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12pt;
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+
+.eduRow + .eduRow {
+  margin-top: 3pt;
+}
+
+.eduDegree {
+  font-weight: 700;
+}
+
+.eduInstitution {
+  margin-top: 1pt;
+}
+
+.eduRight {
+  white-space: nowrap;
+  font-weight: 700;
+}
