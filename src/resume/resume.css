@@ -1,35 +1,58 @@
 .resume {
   font-family: Calibri, Arial, sans-serif;
-  font-size: 10pt;
-  line-height: 1.1;
+  font-size: 9.6pt;
+  line-height: 1.06;
   color: #111111;
 }
 
 .resumeHeader {
-  margin-bottom: 5pt;
+  margin-bottom: 4pt;
 }
 
 .resumeName {
-  font-size: 18pt;
+  font-size: 17pt;
   font-weight: 700;
   margin: 0;
   line-height: 1.05;
 }
 
+.resumeHeadline {
+  margin: 1pt 0 0;
+  font-weight: 700;
+  letter-spacing: 0.2pt;
+}
+
 .resumeContact {
   margin: 2pt 0 0;
+  font-size: 9pt;
+  line-height: 1.1;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.resumeContactItem {
+  white-space: nowrap;
+}
+
+.resumeContactDivider {
+  white-space: pre;
+}
+
+.resumeContactLink {
+  color: inherit;
+  text-decoration: none;
 }
 
 .resumeSection {
-  margin-top: 7pt;
+  margin-top: 5pt;
 }
 
 .resumeSectionTitle {
-  font-size: 12pt;
+  font-size: 11pt;
   font-weight: 700;
-  margin: 0 0 2pt;
+  margin: 0 0 1pt;
   text-transform: uppercase;
-  letter-spacing: 0.25pt;
+  letter-spacing: 0.2pt;
   border-bottom: 1pt solid #111111;
   padding-bottom: 1pt;
 }
@@ -51,7 +74,7 @@
 }
 
 .skillGroup {
-  margin: 0 0 2pt;
+  margin: 0 0 1pt;
 }
 
 .skillGroup:last-child {
@@ -63,7 +86,7 @@
 }
 
 .job {
-  margin-top: 5pt;
+  margin-top: 4pt;
   break-inside: avoid;
   page-break-inside: avoid;
 }
@@ -83,7 +106,7 @@
 }
 
 .jobCompany {
-  margin-top: 1pt;
+  margin-top: 0;
 }
 
 .jobDates {
@@ -92,12 +115,36 @@
 }
 
 .jobBullets {
-  margin: 1pt 0 0 13pt;
+  margin: 1pt 0 0 11pt;
   padding: 0;
 }
 
 .jobBullets li {
   margin: 0;
+}
+
+.jobSummary {
+  margin: 1pt 0 0;
+}
+
+.projectList {
+  margin-top: 3pt;
+}
+
+.projectBlock + .projectBlock {
+  margin-top: 4pt;
+}
+
+.projectTitle {
+  font-weight: 700;
+}
+
+.projectMeta {
+  margin: 1pt 0 0;
+}
+
+.projectMetaLabel {
+  font-weight: 700;
 }
 
 .eduRow {
@@ -110,7 +157,7 @@
 }
 
 .eduRow + .eduRow {
-  margin-top: 3pt;
+  margin-top: 2pt;
 }
 
 .eduDegree {
@@ -118,10 +165,14 @@
 }
 
 .eduInstitution {
-  margin-top: 1pt;
+  margin-top: 0;
 }
 
 .eduRight {
   white-space: nowrap;
   font-weight: 700;
+}
+
+.sectionParagraph + .sectionParagraph {
+  margin-top: 3pt;
 }
