@@ -1,60 +1,79 @@
 .resume {
-  font-family: Calibri, Arial, sans-serif;
-  font-size: 9.6pt;
-  line-height: 1.06;
-  color: #111111;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-size: 9pt;
+  line-height: 1.25;
+  color: #333333;
 }
 
 .resumeHeader {
-  margin-bottom: 4pt;
+  margin-bottom: 6pt;
+  text-align: left;
 }
 
 .resumeName {
-  font-size: 17pt;
+  font-size: 20pt;
   font-weight: 700;
+  color: #0f4c81;
   margin: 0;
-  line-height: 1.05;
+  line-height: 1.1;
+  letter-spacing: -0.5px;
 }
 
 .resumeHeadline {
-  margin: 1pt 0 0;
-  font-weight: 700;
-  letter-spacing: 0.2pt;
+  margin: 3pt 0 0;
+  font-size: 11pt;
+  font-weight: 600;
+  color: #0f4c81;
+  letter-spacing: 0.2px;
 }
 
 .resumeContact {
-  margin: 2pt 0 0;
-  font-size: 9pt;
-  line-height: 1.1;
+  margin: 5pt 0 0;
+  font-size: 8.5pt;
+  line-height: 1.2;
   display: flex;
   flex-wrap: wrap;
+  color: #4b5563;
 }
 
 .resumeContactItem {
   white-space: nowrap;
 }
 
+.contactLabel {
+  font-weight: 700;
+  color: #111111;
+}
+
 .resumeContactDivider {
   white-space: pre;
+  color: #9ca3af;
+  font-weight: 400;
 }
 
 .resumeContactLink {
-  color: inherit;
+  color: #0f4c81;
   text-decoration: none;
+  border-bottom: 1px dashed rgba(15, 76, 129, 0.4);
+}
+
+.resumeContactLink:hover {
+  border-bottom-style: solid;
 }
 
 .resumeSection {
-  margin-top: 5pt;
+  margin-top: 10pt;
 }
 
 .resumeSectionTitle {
   font-size: 11pt;
   font-weight: 700;
-  margin: 0 0 1pt;
+  color: #0f4c81;
+  margin: 0 0 4pt;
   text-transform: uppercase;
-  letter-spacing: 0.2pt;
-  border-bottom: 1pt solid #111111;
-  padding-bottom: 1pt;
+  letter-spacing: 0.5px;
+  border-bottom: 1.5pt solid #0f4c81;
+  padding-bottom: 2px;
 }
 
 .resumeSectionBody {
@@ -63,6 +82,7 @@
 
 .resumeParagraph {
   margin: 0;
+  text-align: justify;
 }
 
 .inlineList {
@@ -74,7 +94,9 @@
 }
 
 .skillGroup {
-  margin: 0 0 1pt;
+  margin: 0 0 3pt;
+  font-size: 8.5pt;
+  line-height: 1.25;
 }
 
 .skillGroup:last-child {
@@ -83,18 +105,18 @@
 
 .skillGroupLabel {
   font-weight: 700;
+  color: #111111;
 }
 
 .job {
-  margin-top: 4pt;
-  break-inside: avoid;
-  page-break-inside: avoid;
+  margin-top: 8pt;
 }
 
 .jobHeader {
   display: flex;
   justify-content: space-between;
   gap: 10pt;
+  margin-bottom: 2pt;
 }
 
 .jobLeft {
@@ -102,49 +124,75 @@
 }
 
 .jobTitle {
+  font-size: 9.5pt;
   font-weight: 700;
+  color: #111111;
 }
 
 .jobCompany {
-  margin-top: 0;
+  margin-top: 1px;
+  font-size: 8.5pt;
+  color: #4b5563;
+  font-weight: 500;
 }
 
 .jobDates {
   white-space: nowrap;
+  font-size: 8.5pt;
   font-weight: 700;
+  color: #0f4c81;
 }
 
 .jobBullets {
-  margin: 1pt 0 0 11pt;
+  margin: 3pt 0 0 12pt;
   padding: 0;
 }
 
 .jobBullets li {
-  margin: 0;
+  margin: 0 0 2pt;
+  text-align: justify;
+}
+
+.jobBullets li:last-child {
+  margin-bottom: 0;
 }
 
 .jobSummary {
-  margin: 1pt 0 0;
+  margin: 2pt 0 0;
+  font-style: italic;
+  color: #4b5563;
+  font-size: 8.5pt;
 }
 
 .projectList {
-  margin-top: 3pt;
+  margin-top: 4pt;
+  padding-left: 8pt;
+  border-left: 1.5pt solid #e5e7eb;
 }
 
-.projectBlock + .projectBlock {
-  margin-top: 4pt;
+.projectBlock {
+  margin-bottom: 4pt;
+}
+
+.projectBlock:last-child {
+  margin-bottom: 0;
 }
 
 .projectTitle {
+  font-size: 8.5pt;
   font-weight: 700;
+  color: #0f4c81;
 }
 
 .projectMeta {
-  margin: 1pt 0 0;
+  margin: 2pt 0 0;
+  font-size: 8pt;
+  color: #4b5563;
 }
 
 .projectMetaLabel {
   font-weight: 700;
+  color: #111111;
 }
 
 .eduRow {
@@ -152,27 +200,143 @@
   justify-content: space-between;
   align-items: flex-start;
   gap: 12pt;
+  margin-top: 4pt;
   break-inside: avoid;
   page-break-inside: avoid;
 }
 
 .eduRow + .eduRow {
-  margin-top: 2pt;
+  margin-top: 4pt;
 }
 
 .eduDegree {
+  font-size: 9pt;
   font-weight: 700;
+  color: #111111;
 }
 
 .eduInstitution {
-  margin-top: 0;
+  margin-top: 1px;
+  font-size: 8.5pt;
+  color: #4b5563;
 }
 
 .eduRight {
   white-space: nowrap;
+  font-size: 8.5pt;
   font-weight: 700;
+  color: #0f4c81;
 }
 
 .sectionParagraph + .sectionParagraph {
-  margin-top: 3pt;
+  margin-top: 4pt;
+}
+
+@media print {
+  .resume {
+    font-size: 7.5pt;
+    line-height: 1.10;
+  }
+
+  .resumeHeader {
+    margin-bottom: 4pt;
+  }
+
+  .resumeName {
+    font-size: 18pt;
+  }
+
+  .resumeHeadline {
+    margin-top: 2pt;
+    font-size: 9.4pt;
+  }
+
+  .resumeContact {
+    margin-top: 3pt;
+    font-size: 7.4pt;
+    line-height: 1.12;
+  }
+
+  .resumeSection {
+    margin-top: 4.5pt;
+  }
+
+  .resumeSection.pageTwoStart {
+    margin-top: 0;
+    break-before: page;
+    page-break-before: always;
+  }
+
+  .resumeSectionTitle {
+    margin-bottom: 2pt;
+    padding-bottom: 1px;
+    font-size: 8.6pt;
+    border-bottom-width: 1pt;
+    break-after: avoid;
+    page-break-after: avoid;
+  }
+
+  .skillGroup {
+    margin-bottom: 1pt;
+    font-size: 7pt;
+    line-height: 1.08;
+  }
+
+  .job {
+    margin-top: 3pt;
+    break-inside: auto;
+    page-break-inside: auto;
+  }
+
+  .jobHeader {
+    margin-bottom: 1pt;
+    break-after: avoid;
+    page-break-after: avoid;
+  }
+
+  .jobTitle {
+    font-size: 7.8pt;
+  }
+
+  .jobCompany,
+  .jobDates,
+  .jobSummary {
+    font-size: 7pt;
+  }
+
+  .jobBullets {
+    margin: 1pt 0 0 9pt;
+  }
+
+  .jobBullets li {
+    margin-bottom: 0.6pt;
+    line-height: 1.11;
+  }
+
+  .projectList {
+    margin-top: 2pt;
+    padding-left: 5pt;
+    border-left-width: 1pt;
+  }
+
+  .projectBlock {
+    margin-bottom: 2.2pt;
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  .projectTitle {
+    font-size: 7.2pt;
+    break-after: avoid;
+    page-break-after: avoid;
+  }
+
+  .projectMeta {
+    margin-top: 1pt;
+    font-size: 6.7pt;
+  }
+
+  .eduRow {
+    margin-top: 2pt;
+  }
 }

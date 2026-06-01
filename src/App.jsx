@@ -5,7 +5,7 @@ import './App.css'
 
 function App() {
   useEffect(() => {
-    document.title = `${deepakKumarResume.name} Resume`
+    document.title = `${deepakKumarResume.name} - Resume`
   }, [])
 
   return (
@@ -14,32 +14,16 @@ function App() {
         <div>
           <p className="screenEyebrow">Resume</p>
           <h1 className="screenTitle">{deepakKumarResume.name}</h1>
-          <p className="screenSubtitle">
-            Clean printable layout. Use download to save it as PDF.
-          </p>
+          <p className="screenSubtitle">{deepakKumarResume.headline}</p>
         </div>
 
         <div className="screenActions">
-          <button
-            className="primaryButton"
-            type="button"
-            onClick={() => window.print()}
-          >
+          <button className="primaryButton" type="button" onClick={() => window.print()}>
             Download Resume
           </button>
           <a className="secondaryButton" href={`mailto:${deepakKumarResume.email}`}>
             Email
           </a>
-          {deepakKumarResume.links?.[0]?.href ? (
-            <a
-              className="secondaryButton"
-              href={deepakKumarResume.links[0].href}
-              target="_blank"
-              rel="noreferrer"
-            >
-              LinkedIn
-            </a>
-          ) : null}
         </div>
       </header>
 

@@ -1,8 +1,8 @@
 import './resume.css'
 
-function Section({ title, children }) {
+function Section({ title, children, className = '' }) {
   return (
-    <section className="resumeSection">
+    <section className={`resumeSection ${className}`.trim()}>
       <h2 className="resumeSectionTitle">{title}</h2>
       <div className="resumeSectionBody">{children}</div>
     </section>
@@ -10,29 +10,33 @@ function Section({ title, children }) {
 }
 
 function ContactLine({ location, phone, email, links = [] }) {
-  const parts = [location, phone, email, ...links].filter(Boolean)
+  const parts = [
+    email ? { label: 'Email', value: email, href: `mailto:${email}` } : null,
+    phone ? { label: 'Phone', value: phone } : null,
+    location ? { label: 'Location', value: location } : null,
+    ...links.map((link) => typeof link === 'string' ? { label: '', value: link } : link)
+  ].filter(Boolean)
 
   if (!parts.length) return null
 
   return (
     <p className="resumeContact">
       {parts.map((part, index) => {
-        const item = typeof part === 'string' ? { label: part } : part
-
         return (
-          <span className="resumeContactItem" key={`${item.label}-${index}`}>
+          <span className="resumeContactItem" key={`${part.label || part.value}-${index}`}>
             {index > 0 ? (
               <span className="resumeContactDivider" aria-hidden="true">
                 {' '}
                 |{' '}
               </span>
             ) : null}
-            {item.href ? (
-              <a className="resumeContactLink" href={item.href}>
-                {item.label}
+            {part.label ? <span className="contactLabel">{part.label}:</span> : null}{' '}
+            {part.href ? (
+              <a className="resumeContactLink" href={part.href}>
+                {part.value}
               </a>
             ) : (
-              item.label
+              part.value
             )}
           </span>
         )
@@ -164,8 +168,12 @@ function Education({ education }) {
 function AdditionalSections({ sections }) {
   if (!sections?.length) return null
 
-  return sections.map((section) => (
-    <Section title={section.title} key={section.title}>
+  return sections.map((section, sectionIndex) => (
+    <Section
+      title={section.title}
+      className={sectionIndex === 0 ? 'pageTwoStart' : ''}
+      key={section.title}
+    >
       {section.paragraphs?.map((paragraph, index) => (
         <p className="resumeParagraph sectionParagraph" key={index}>
           {paragraph}
@@ -212,6 +220,16 @@ export default function Resume({ data }) {
         </Section>
       )}
 
+      {data.achievements?.length ? (
+        <Section title="Key Achievements">
+          <ul className="jobBullets">
+            {data.achievements.map((achievement, index) => (
+              <li key={index}>{achievement}</li>
+            ))}
+          </ul>
+        </Section>
+      ) : null}
+
       <Experience experience={data.experience} />
 
       <AdditionalSections sections={data.additionalSections} />
@@ -221,16 +239,6 @@ export default function Resume({ data }) {
       {data.certifications?.length ? (
         <Section title="Certifications">
           <InlineList items={data.certifications} />
-        </Section>
-      ) : null}
-
-      {data.achievements?.length ? (
-        <Section title="Achievements">
-          <ul className="jobBullets">
-            {data.achievements.map((achievement, index) => (
-              <li key={index}>{achievement}</li>
-            ))}
-          </ul>
         </Section>
       ) : null}
     </article>
