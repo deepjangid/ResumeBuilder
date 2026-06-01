@@ -1,10 +1,5 @@
 .appShell {
   min-height: 100vh;
-  padding: 0;
-  background: #030712;
-}
-
-.appShell[data-view-mode='printable'] {
   padding: 32px 20px 48px;
   background:
     radial-gradient(circle at top, rgba(209, 213, 219, 0.55), transparent 35%),
@@ -131,32 +126,20 @@
     display: none !important;
   }
 
+  .resumeStage {
+    display: block !important;
+  }
+
   .resumePaper {
     width: auto;
     min-height: auto;
-    padding: 0.5in;
+    padding: 0;
     box-shadow: none;
+    display: block !important;
   }
 }
 
 @page {
   size: A4;
-  margin: 0;
-}
-
-.screen-view {
-  display: none;
-}
-
-.screen-view.active {
-  display: block;
-}
-
-@media print {
-  .interactive-view {
-    display: none !important;
-  }
-  .printable-view {
-    display: block !important;
-  }
+  margin: 0.4in 0.6in;
 }

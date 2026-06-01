@@ -1,8 +1,8 @@
 import './resume.css'
 
-function Section({ title, children }) {
+function Section({ title, children, className = '' }) {
   return (
-    <section className="resumeSection">
+    <section className={`resumeSection ${className}`.trim()}>
       <h2 className="resumeSectionTitle">{title}</h2>
       <div className="resumeSectionBody">{children}</div>
     </section>
@@ -168,8 +168,12 @@ function Education({ education }) {
 function AdditionalSections({ sections }) {
   if (!sections?.length) return null
 
-  return sections.map((section) => (
-    <Section title={section.title} key={section.title}>
+  return sections.map((section, sectionIndex) => (
+    <Section
+      title={section.title}
+      className={sectionIndex === 0 ? 'pageTwoStart' : ''}
+      key={section.title}
+    >
       {section.paragraphs?.map((paragraph, index) => (
         <p className="resumeParagraph sectionParagraph" key={index}>
           {paragraph}

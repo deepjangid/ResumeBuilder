@@ -110,8 +110,6 @@
 
 .job {
   margin-top: 8pt;
-  break-inside: avoid;
-  page-break-inside: avoid;
 }
 
 .jobHeader {
@@ -232,4 +230,113 @@
 
 .sectionParagraph + .sectionParagraph {
   margin-top: 4pt;
+}
+
+@media print {
+  .resume {
+    font-size: 7.5pt;
+    line-height: 1.10;
+  }
+
+  .resumeHeader {
+    margin-bottom: 4pt;
+  }
+
+  .resumeName {
+    font-size: 18pt;
+  }
+
+  .resumeHeadline {
+    margin-top: 2pt;
+    font-size: 9.4pt;
+  }
+
+  .resumeContact {
+    margin-top: 3pt;
+    font-size: 7.4pt;
+    line-height: 1.12;
+  }
+
+  .resumeSection {
+    margin-top: 4.5pt;
+  }
+
+  .resumeSection.pageTwoStart {
+    margin-top: 0;
+    break-before: page;
+    page-break-before: always;
+  }
+
+  .resumeSectionTitle {
+    margin-bottom: 2pt;
+    padding-bottom: 1px;
+    font-size: 8.6pt;
+    border-bottom-width: 1pt;
+    break-after: avoid;
+    page-break-after: avoid;
+  }
+
+  .skillGroup {
+    margin-bottom: 1pt;
+    font-size: 7pt;
+    line-height: 1.08;
+  }
+
+  .job {
+    margin-top: 3pt;
+    break-inside: auto;
+    page-break-inside: auto;
+  }
+
+  .jobHeader {
+    margin-bottom: 1pt;
+    break-after: avoid;
+    page-break-after: avoid;
+  }
+
+  .jobTitle {
+    font-size: 7.8pt;
+  }
+
+  .jobCompany,
+  .jobDates,
+  .jobSummary {
+    font-size: 7pt;
+  }
+
+  .jobBullets {
+    margin: 1pt 0 0 9pt;
+  }
+
+  .jobBullets li {
+    margin-bottom: 0.6pt;
+    line-height: 1.11;
+  }
+
+  .projectList {
+    margin-top: 2pt;
+    padding-left: 5pt;
+    border-left-width: 1pt;
+  }
+
+  .projectBlock {
+    margin-bottom: 2.2pt;
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  .projectTitle {
+    font-size: 7.2pt;
+    break-after: avoid;
+    page-break-after: avoid;
+  }
+
+  .projectMeta {
+    margin-top: 1pt;
+    font-size: 6.7pt;
+  }
+
+  .eduRow {
+    margin-top: 2pt;
+  }
 }
